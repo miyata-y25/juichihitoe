@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+<meta charset="utf-8" />
+<title>@@(pageTitle)@@ | 静岡県揉一ひとえ</title>
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="telephone=no" name="format-detection" />
+<meta content="width=device-width,initial-scale=1" name="viewport" />
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta content="" property="og:title" />
+<meta content="" property="og:description" />
+<meta content="" property="og:url" />
+<meta content="" property="og:image" />
+<meta content="website" property="og:type" />
+<meta content="" property="og:site_name" />
+<meta content="" property="og:site_url" />
+<link href="../assets/css/base.css" rel="stylesheet" type="text/css" />
+<link href="../assets/css/page.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hina+Mincho&family=Josefin+Slab:ital,wght@1,100..700&family=Noto+Sans:wght@400..900&display=swap" rel="stylesheet">
+<!-- TemplateParam name="pageTitle" type="text" value="ページタイトル" -->
+<!-- TemplateParam name="category" type="text" value="" -->
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+
+<body>
+
+<header class="site-header">
+    <div class="site-header__inner">
+        <p class="site-header__logo"><a href="../"><img src="../assets/img/common/logo_clr.svg" alt=""></a></p>
+        <button type="button" class="menu-btn"><span><span></span><span></span><span></span></span></button>
+        <div class="header-cont">
+            <div class="header-cont__inner">
+                <nav class="header-nav">
+                    <ul class="g-nav">
+                        <li class="g-nav__list"><a href="../">トップページ</a></li>
+                        <li class="g-nav__list"><a href="../taste">美味しさの秘密</a></li>
+                        <li class="g-nav__list"><a href="../origin">産地紹介</a></li>
+                    </ul>
+                    <div class="logo-cont">
+                        <figure><img src="../assets/img/common/logo_clr.svg" alt=""></figure>
+                        <a href="#" target="_blank"><img src="../assets/img/common/gnav_btn.svg" alt=""></a>
+                    </div>
+                    <div class="info-cont">
+                        <p class="site-footer__ttl">お問い合わせ</p>
+                        <p class="site-footer__txt">
+                            JA静岡経済連 くらし支援部 生活葬祭課（※お電話での注文は受け付けておりません。）<br>
+                            電話054-284-9740　メールの場合は、<a href="mailto:TENPO@kei.ja-shizuoka.or.jp">こちら</a>からお問い合わせください。
+                        </p>
+                        <ul class="site-footer__ico">
+                            <li><a href="https://x.com/JAtown_teshioya" target="_blank"><img src="../assets/img/common/ico_x_clr.svg" alt=""></a></li>
+                            <li><a href="#" target="_blank"><img src="../assets/img/common/ico_fb_clr.svg" alt=""></a></li>
+                            <li><a href="https://www.instagram.com/shizuoka_keizairen/" target="_blank"><img src="../assets/img/common/ico_in_clr.svg" alt=""></a></li>
+                            <li><a href="https://www.youtube.com/@ja1588" target="_blank"><img src="../assets/img/common/ico_yt_clr.svg" alt=""></a></li>
+                            <li class="ja-logo"><a href="https://jashizuoka-keizairen.net" target="_blank"><img src="../assets/img/common/logo_ja_clr.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="wrap">
+
+<h1 class="page-ttl @@(category)@@ anim fadein">@@(pageTitle)@@</h1>
+<a href="https://www.ja-town.com/shop/g/g4301-5601011/" class="buy-btn"><img src="../assets/img/common/buy_btn.svg" alt="ご購入はこちら"></a>
+
+<!-- TemplateBeginEditable name="content" -->
+
+<!-- TemplateEndEditable -->
+	
+</div><!-- /.wrap -->
+
+
+<footer class="site-footer">
+    <div class="site-footer__inner">
+        <p class="site-footer__logo"><img src="../assets/img/common/logo.svg" alt=""></p>
+        <div class="site-footer__info">
+            <p class="site-footer__ttl">お問い合わせ</p>
+            <p class="site-footer__txt">
+                JA静岡経済連 くらし支援部 生活葬祭課（※お電話での注文は受け付けておりません。）<br>
+                電話054-284-9740　メールの場合は、<a href="mailto:TENPO@kei.ja-shizuoka.or.jp">こちら</a>からお問い合わせください。
+            </p>
+            <ul class="site-footer__ico">
+                <li><a href="https://x.com/JAtown_teshioya" target="_blank"><img src="../assets/img/common/ico_x.svg" alt=""></a></li>
+                <li><a href="#" target="_blank"><img src="../assets/img/common/ico_fb.svg" alt=""></a></li>
+                <li><a href="https://www.instagram.com/shizuoka_keizairen/" target="_blank"><img src="../assets/img/common/ico_in.svg" alt=""></a></li>
+                <li><a href="https://www.youtube.com/@ja1588" target="_blank"><img src="../assets/img/common/ico_yt.svg" alt=""></a></li>
+                <li class="ja-logo"><a href="https://jashizuoka-keizairen.net" target="_blank"><img src="../assets/img/common/logo_ja.svg" alt=""></a></li>
+            </ul>
+            <p class="copyright">&copy;JA静岡経済連｜静岡茶揉一ひとえプロジェクト</p>
+        </div>
+    </div>
+</footer>
+  
+<script src="../assets/js/lib/jquery.min.js"></script>
+<script src="../assets/js/common.js"></script>
+</body>
+</html>
