@@ -227,7 +227,7 @@ a {
   display: block;
   position: relative;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .pc-show {
     display: none;
   }
@@ -237,7 +237,7 @@ a {
   display: none;
   position: relative;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .sp-show {
     display: block;
   }
@@ -380,8 +380,8 @@ a {
 }
 
 .fadein.is-animated {
-  -webkit-animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
-          animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+  -webkit-animation: fadeIn 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+          animation: fadeIn 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 
 .slideinR.is-animated {
@@ -488,6 +488,264 @@ a {
     opacity: 1;
   }
 }
+.fadeincont > * {
+  opacity: 0;
+}
+
+.fadeincont.is-animated {
+  opacity: 1;
+}
+
+.fadeincont.is-animated > *:nth-of-type(1) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(2) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(3) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(4) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 0.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(5) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(6) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(7) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(8) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(9) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 1.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(10) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(11) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(12) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(13) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(14) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 2.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(15) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(16) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(17) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(18) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(19) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 3.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(20) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(21) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(22) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(23) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(24) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 4.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(25) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(26) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(27) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(28) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(29) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 5.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(30) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(31) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(32) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(33) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(34) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 6.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(35) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(36) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(37) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(38) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(39) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 7.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(40) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(41) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(42) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(43) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(44) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 8.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(45) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(46) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.2s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.2s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(47) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.4s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.4s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(48) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.6s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.6s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(49) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.8s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 9.8s forwards;
+}
+
+.fadeincont.is-animated > *:nth-of-type(50) {
+  -webkit-animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 10s forwards;
+          animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) 10s forwards;
+}
+
 sup {
   font-size: 0.5em;
 }
@@ -658,18 +916,19 @@ sup {
 ==================================================================================================*/
 .site-header {
   width: 100%;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   z-index: 99999;
-  font-size: clamp(0.75em, 1vw, 1em);
-  padding: 1em;
+  font-size: 1.6rem;
   -webkit-transition: background 0.5s;
   transition: background 0.5s;
 }
 @media screen and (max-width: 768px) {
   .site-header {
-    padding: 0;
+    position: fixed;
+    font-size: 1.2rem;
+    padding: 9px 0;
     background: #FFF;
   }
 }
@@ -688,12 +947,12 @@ sup {
   margin-right: auto;
 }
 .site-header__logo img {
-  height: 3em;
+  height: 36px;
 }
 @media screen and (max-width: 768px) {
   .site-header__logo {
     display: block;
-    margin-left: 1em;
+    margin-left: 16px;
   }
 }
 .site-header__btn {
@@ -701,20 +960,26 @@ sup {
   width: 18.5625em;
 }
 .site-header .menu-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
   z-index: 10000;
   display: block;
   background-color: #005c3f;
   border: none;
-  width: 4.375em;
-  height: 4.375em;
-  padding: 1.25em 1.25em 1.5em;
+  width: 60px;
+  height: 60px;
+  padding: 21px 16px 23px;
   font-weight: bold;
   margin-left: auto;
 }
 @media screen and (max-width: 768px) {
   .site-header .menu-btn {
-    width: 4.375em;
-    height: 4.375em;
+    width: 54px;
+    height: 54px;
+    padding: 18px 14px 20px;
+    top: 0;
+    right: 0;
   }
 }
 .site-header .menu-btn span {
@@ -758,16 +1023,16 @@ sup {
           transform: translateY(0px) rotate(-45deg);
 }
 .site-header .menu-btn--opened span span:nth-child(1) {
-  -webkit-transform: rotate(0deg) translateY(0.875em);
-          transform: rotate(0deg) translateY(0.875em);
+  -webkit-transform: rotate(0deg) translateY(8px);
+          transform: rotate(0deg) translateY(8px);
   width: 100%;
 }
 .site-header .menu-btn--opened span span:nth-child(2) {
   opacity: 0;
 }
 .site-header .menu-btn--opened span span:nth-child(3) {
-  -webkit-transform: rotate(-90deg) translateX(0.8125em);
-          transform: rotate(-90deg) translateX(0.8125em);
+  -webkit-transform: rotate(-90deg) translateX(8px);
+          transform: rotate(-90deg) translateX(8px);
   width: 100%;
 }
 .site-header .header-cont {
@@ -778,6 +1043,11 @@ sup {
   bottom: 0;
   width: 100%;
   background: rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .site-header .header-cont {
+    background: rgba(255, 255, 255, 0.9);
+  }
 }
 .site-header .header-cont__inner {
   height: 100%;
@@ -796,23 +1066,25 @@ sup {
 }
 @media screen and (max-width: 768px) {
   .site-header .header-cont__inner {
-    margin-top: 4.375em;
+    margin-top: 54px;
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
+    display: block;
+    height: calc(100% - 54px);
   }
 }
 .site-header .header-nav {
-  max-width: 840px;
-  width: 100%;
+  width: 840px;
   background: rgba(255, 255, 255, 0.93) url(../img/common/gnav_bg.svg) no-repeat;
   background-size: 6.25em auto;
   background-position: bottom right;
-  padding: 7em;
+  padding: 100px 110px 60px;
 }
 @media screen and (max-width: 768px) {
   .site-header .header-nav {
+    width: 100%;
     padding: 0;
     background-size: 5em auto;
   }
@@ -836,7 +1108,7 @@ sup {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 2em;
+    margin-bottom: 2.5em;
   }
 }
 .site-header .header-nav .g-nav__list {
@@ -861,13 +1133,14 @@ sup {
 }
 .site-header .header-nav .g-nav__list > a {
   text-decoration: none;
-  font-weight: 600;
   color: #005c3f;
 }
 @media screen and (max-width: 768px) {
   .site-header .header-nav .g-nav__list > a {
+    line-height: 78px;
+    font-size: 15px;
     display: block;
-    padding: 1.5em 1em;
+    padding: 0 1em;
   }
 }
 @media screen and (max-width: 768px) {
@@ -904,9 +1177,8 @@ sup {
 }
 @media screen and (max-width: 768px) {
   .site-header .header-nav .logo-cont figure {
-    margin-bottom: 1em;
-    width: 90%;
-    max-width: 320px;
+    margin-bottom: 2em;
+    width: 309px;
   }
 }
 .site-header .header-nav .logo-cont a {
@@ -919,8 +1191,10 @@ sup {
     max-width: 200px;
   }
 }
-.site-header .header-nav .info-cont {
-  padding: 0 3em 3em;
+@media screen and (max-width: 768px) {
+  .site-header .header-nav .info-cont {
+    padding: 0 35px 38px;
+  }
 }
 .site-header .header-nav .info-cont a {
   color: #000;
@@ -941,6 +1215,31 @@ sup {
 }
 .site-header .header-nav .info-cont .site-footer__ico a {
   display: block;
+}
+.site-header .header-nav .info-cont .site-footer__ttl {
+  font-size: 0.9375em;
+  margin-bottom: 0.25em;
+}
+@media screen and (max-width: 768px) {
+  .site-header .header-nav .info-cont .site-footer__ttl {
+    font-size: 1.3rem;
+  }
+}
+.site-header .header-nav .info-cont .site-footer__txt {
+  font-size: 0.9375em;
+}
+@media screen and (max-width: 768px) {
+  .site-header .header-nav .info-cont .site-footer__txt {
+    font-size: 1.3rem;
+  }
+}
+.site-header .header-nav .info-cont .site-footer__txt span {
+  font-size: 0.9333333333em;
+}
+@media screen and (max-width: 768px) {
+  .site-header .header-nav .info-cont .site-footer__txt span {
+    font-size: 1.2rem;
+  }
 }
 
 .gotop {
@@ -967,32 +1266,36 @@ sup {
   height: 7.5em;
   z-index: 100;
   border-radius: 50em;
-  -webkit-box-shadow: 0.625em 0.625em 0.625em rgba(0, 0, 0, 0.2);
-          box-shadow: 0.625em 0.625em 0.625em rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 2.5em 2.5em 2.5em rgba(0, 0, 0, 0.24);
+          box-shadow: 2.5em 2.5em 2.5em rgba(0, 0, 0, 0.24);
 }
 .buy-btn.cls {
-  -webkit-animation: buybtn 1s ease-in forwards;
-          animation: buybtn 1s ease-in forwards;
+  -webkit-animation: buybtn 0.5s ease-in forwards;
+          animation: buybtn 0.5s ease-in forwards;
+}
+@media screen and (max-width: 768px) {
+  .buy-btn {
+    width: 84px;
+    height: 84px;
+  }
 }
 
 @-webkit-keyframes buybtn {
   0% {
-    -webkit-transform: translate(0%, 0);
-            transform: translate(0%, 0);
+    -webkit-transform: translate(20%, 0);
+            transform: translate(20%, 0);
     opacity: 0;
   }
-  20% {
-    -webkit-transform: translate(0%, 0);
-            transform: translate(0%, 0);
+  40% {
     opacity: 1;
   }
-  40% {
-    -webkit-transform: translate(4%, 0);
-            transform: translate(4%, 0);
+  50% {
+    -webkit-transform: translate(-2%, 0);
+            transform: translate(-2%, 0);
   }
-  80% {
-    -webkit-transform: translate(-4%, 0);
-            transform: translate(-4%, 0);
+  75% {
+    -webkit-transform: translate(2%, 0);
+            transform: translate(2%, 0);
   }
   100% {
     -webkit-transform: translate(0%, 0);
@@ -1002,34 +1305,29 @@ sup {
 
 @keyframes buybtn {
   0% {
-    -webkit-transform: translate(0%, 0);
-            transform: translate(0%, 0);
+    -webkit-transform: translate(20%, 0);
+            transform: translate(20%, 0);
     opacity: 0;
   }
-  20% {
-    -webkit-transform: translate(0%, 0);
-            transform: translate(0%, 0);
+  40% {
     opacity: 1;
   }
-  40% {
-    -webkit-transform: translate(4%, 0);
-            transform: translate(4%, 0);
+  50% {
+    -webkit-transform: translate(-2%, 0);
+            transform: translate(-2%, 0);
   }
-  80% {
-    -webkit-transform: translate(-4%, 0);
-            transform: translate(-4%, 0);
+  75% {
+    -webkit-transform: translate(2%, 0);
+            transform: translate(2%, 0);
   }
   100% {
     -webkit-transform: translate(0%, 0);
             transform: translate(0%, 0);
   }
 }
-.wrap {
-  font-size: clamp(0.75em, 1vw, 1em);
-}
 @media screen and (max-width: 768px) {
   .wrap {
-    margin-top: 4.375em;
+    margin-top: 54px;
   }
 }
 

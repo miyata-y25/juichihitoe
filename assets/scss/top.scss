@@ -15,6 +15,9 @@ body {
     background-size: percentage(758/1920) auto;
 }
 
+.wrap {
+    font-size: clamp((12em/16), (1600vw/1366) , (16em/16));
+}
 
 /*==================================================================================================
     main
@@ -27,11 +30,13 @@ body {
     background-position: center;
     height: 100vh;
     @include max-screen($screen-sm) {
-        height: 100vh;
+        height: calc(100vh - 54px);
+        max-height: 606px;
+        background-image: url(../img/top/main_bg_sp.png);
     }
     &__ttl {
         position: absolute;
-        left: 15%;
+        left: 21%;
         top: 10%;
         max-width: 130px;
         @include max-screen($screen-sm) {
@@ -46,15 +51,16 @@ body {
         bottom: 20%;
         width: (287em/16);
         @include max-screen($screen-sm) {
-            left: 10%;
-            bottom: 15%;
-            width: (350em/16);
+            left: percentage(38/390);
+            bottom: 0%;
+            margin-bottom: percentage(28/390);
+            width: percentage(207/390);
         }
     }
 }
 
 .sec {
-    padding: (360em/16) 20px (200em/16);
+    padding: 45vh 20px 20vh;
     margin-top: -28vh;
     display: flex;
     flex-wrap: wrap;
@@ -64,7 +70,8 @@ body {
     position: relative;
     color: $gre;
     @include max-screen($screen-sm) {
-        padding: (500em/16) 20px (200em/16);
+        padding: 200px 20px 150px;
+        margin-top: (-4200vw/390);
     }
     &__ttl {
         font-family: $Hina-font;
@@ -76,18 +83,26 @@ body {
         position: relative;
         z-index: 1;
         @include max-screen($screen-sm) {
-            font-size: (40em/16);
+            font-size: (34em/12);
         }
         span {
             display: block;
-            font-size: (35em/58);
+            font-size: (20em/34);
+        }
+        &.--sm {
+            @include max-screen($screen-sm) {
+                font-size: (30em/12);
+                span {
+                    font-size: (20em/30);
+                }
+            }
         }
     }
     &__txt {
         font-size: (18em/16);
         line-height: (34/18);
         margin-top: 1em;
-        letter-spacing: 0.2em;
+        letter-spacing: 0.05em;
         position: relative;
         z-index: 1;
         @include max-screen($screen-sm) {
@@ -118,6 +133,8 @@ body {
         text-align: center;
         z-index: 9;
         @include max-screen($screen-sm) {
+            padding-top: 25vh;
+            margin-top: 0;
             background-image: url(../img/top/about_bg_sp.png);
             background-position: center bottom;
         }
@@ -154,8 +171,12 @@ body {
         font-family: $Hina-font;
         color: $gre;
         font-size: (45em/16);
+        font-weight: normal;
         @include max-screen($screen-sm) {
-            width: 80%;
+            width: percentage(236/390);
+            min-width: 236px;
+            font-size: (38em/12);
+            margin-bottom: 0.5em;
         }
     }
     &__list {
@@ -173,7 +194,8 @@ body {
             display: flex;
             align-items: center;
             @include max-screen($screen-sm) {
-                width: 80%;
+                width: percentage(236/390);
+                min-width: 236px;
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
@@ -189,6 +211,7 @@ body {
             p {
                 @include max-screen($screen-sm) {
                     margin-top: 1em;
+                    font-size: (14em/12);
                 }
                 a {
                     font-size: (18em/16);
@@ -196,6 +219,9 @@ body {
                     text-decoration: underline;
                     &:hover {
                         text-decoration: none;
+                    }
+                    @include max-screen($screen-sm) {
+                        font-size: (16em/14);
                     }
                 }
             }
@@ -206,7 +232,7 @@ body {
 
 @keyframes parallax-fast-anim {
     from {
-        transform: translateY(100vh);
+        transform: translateY(200vh);
     }
     to {
         transform: translateY(0px);
@@ -224,21 +250,24 @@ body {
 .abs-img01 {
     position: absolute;
     right: 0;
-    bottom: 0%;
-    animation: parallax-fast-anim linear;
+    bottom: -140vh;
+    width: (255em/16);
+    animation: parallax-slow-anim linear;
     animation-timeline: scroll();
     @include max-screen($screen-sm) {
-        width: 45%;
+        width: 40%;
+        bottom: -180vh;
     }
 }
 .abs-img02 {
     position: absolute;
     left: 0;
-    bottom: 0%;
+    bottom: 120vh;
     width: (330em/16);
-    animation: parallax-slow-anim linear;
+    animation: parallax-fast-anim linear;
     animation-timeline: scroll();
     @include max-screen($screen-sm) {
+        bottom: -45vh;
         width: 45%;
     }
 }

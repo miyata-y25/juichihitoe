@@ -37,26 +37,6 @@
     $('.is-animated').removeClass('is-animated');
 })(jQuery);
 
-
-$(function($){
-    var $header     = $('.buy-btn');
-    
-    scrollCheck();
-    $(window).scroll(scrollCheck);
-    
-    function scrollCheck(){
-        var scrl = $(window).scrollTop();
-        var scrlH = $('.top-main').innerHeight();
-        var height = $(window).height();
-
-        if (scrl > height/3) {
-            $header.fadeIn(500).addClass("cls");
-        } else {
-            $header.fadeOut(500).removeClass("cls");
-        }
-    }
-});
-
 $(function(){
 	$('.-tablist input').on('click', function(){
 		var index = $('.-tablist input').index(this);
@@ -67,7 +47,7 @@ $(function(){
 
 $(function(){
   $('.jsAccordionBtn').on('click',function(){
-    $(this).next('.jsAccordionText').slideToggle();
+    $(this).toggleClass('active').next('.jsAccordionText').slideToggle();
   });
 });
 

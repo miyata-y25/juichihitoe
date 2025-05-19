@@ -23,15 +23,36 @@
     
 ==================================================================================================*/
 .site-header {
+    width: 1026px;
+    top: 20px;
+    left: calc((100vw - 1100px) / 2 + 37px);
+    @include max-screen(1100px) {
+        left: 37px;
+    }
+    @include max-screen($screen-sm) {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
     &__logo {
         display: block;
         margin-right: auto;
         img {
-            height: (36em/12);
+            height: 62px;
+            @include max-screen($screen-sm) {
+                height: 36px;
+            }
         }
         @include max-screen($screen-sm) {
             display: block;
             margin-left: 1em;
+        }
+    }
+    .menu-btn {
+        right: calc((100vw - 1100px) / 2 + 20px);
+        @include max-screen($screen-sm) {
+            right: 0;
         }
     }
 }
@@ -41,32 +62,47 @@
     background-position: center bottom;
     text-align: center;
     font-size: (34em/16);
+    line-height: 1;
     font-family: $Hina-font;
     font-weight: normal;
     color: $gre;
-    max-width: 1100px;
-    margin: 0 auto 2em;
-    padding: 4em 0;
+    width: 1100px;
+    margin: 0 auto (100em/34);
+    padding: (141em/34) 0;
     @include max-screen($screen-sm) {
-        padding: 2.5em 0;
+        width: 100%;
+        font-size: (26em/16);
+        padding: (58em/26) 0;
+        margin-bottom: (40em/26);
     }
     &.origin {
         background-image: url(../img/origin/main_bg.png);
     }
 }
 .page-txt {
-    max-width: 1064px;
-    margin: 0 auto 3em;
-    padding: 0 40px;
+    width: 1100px;
+    padding: 0 37px;
+    margin: 0 auto 80px;
     font-size: (18em/16);
+    @include max-screen($screen-sm) {
+        width: 100%;
+        font-size: (15em/16);
+        line-height: (28/15);
+        margin-bottom: (60em/15);
+    }
 }
 
 .taste-sec {
     margin-bottom: 5em;
     position: relative;
+    @include max-screen($screen-sm) {
+        margin-bottom: 3em;
+    }
     &:nth-of-type(even) {
         text-align: right;
         .taste-sec__ttl {
+            padding-left: 2em;
+            padding-right: calc((100vw - 1100px) / 2);
             @include max-screen(1180px) {
                 display: block;
                 padding-right: 40px;
@@ -78,10 +114,18 @@
         .taste-sec__bdy {
             text-align: left;
         }
+        .taste-sec__cont {
+            @include max-screen($screen-sm) {
+                order: 2;
+            }
+        }
         .taste-sec__img {
+            margin-right: 0;
+            margin-left: 40px;
             order: 2;
             @include max-screen($screen-sm) {
                 order: 1;
+                margin-left: 0;
             }
         }
     }
@@ -92,7 +136,7 @@
         font-weight: normal;
         vertical-align: middle;
         padding-left: calc((100vw - 1100px) / 2);
-        padding-right: calc((100vw - 1100px) / 2);
+        padding-right: 2em;
         border-bottom: 1px solid $gre;
         line-height: 1.2;
         margin-bottom: 1em;
@@ -104,7 +148,7 @@
             margin-right: 40px;
         }
         @include max-screen($screen-sm) {
-            font-size: (32em/16);
+            font-size: (26em/16);
         }
         span {
             color: $lgre;
@@ -112,27 +156,55 @@
             font-style: italic;
             font-size: (110em/54);
             margin-right: 0.25em;
+            position: relative;
+            bottom: -0.05em;
+            @include max-screen($screen-sm) {
+                font-size: (58em/26);
+            }
         }
     }
     &__bdy {
-        max-width: 1180px;
-        padding: 0 40px;
+        width: 1180px;
+        padding: 0 114px 0 40px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
         @include max-screen($screen-sm) {
+            width: 100%;
             flex-direction: column;
+            padding: 0 37px;
+        }
+    }
+    &__photo {
+        width: 892px;
+        margin-top: 70px;
+        @include max-screen($screen-sm) {
+            width: 100%;
+            padding: 0 37px;
+            margin-top: 1em;
         }
     }
     &__img {
-        width: percentage(266/1100);
+        width: 266px;
+        margin-right: 40px;
         @include max-screen($screen-sm) {
             width: 100%;
             margin-bottom: 1.5em;
+            margin-right: 0;
+        }
+        &.--sm {
+            @include max-screen($screen-sm) {
+                text-align: center;
+                margin-bottom: 0;
+                img {
+                    width: 200px;
+                }
+            }
         }
     }
     &__cont {
-        width: percentage(800/1100);
+        width: 720px;
+        flex: 1;
         @include max-screen($screen-sm) {
             width: 100%;
         }
@@ -144,24 +216,34 @@
         font-size: (36em/16);
         margin-bottom: 0.5em;
         @include max-screen($screen-sm) {
-            font-size: (24em/16);
+            font-size: (22em/16);
+            line-height: (34/22);
         }
     }
     &__txt {
         margin-bottom: 1em;
         line-height: (30/16);
+        @include max-screen($screen-sm) {
+            font-size: (14em/16);
+            line-height: (24/14);
+        }
         .ico {
             height: 2em;
             width: auto;
             display: inline-block;
             margin-right: 1em;
+            @include max-screen($screen-sm) {
+                float: left;
+                height: 30px;
+                margin-top: 0.5em;
+            }
         }
     }
 }
 
 @keyframes parallax-fast-anim {
     from {
-        transform: translateY(80vh);
+        transform: translateY(200vh);
     }
     to {
         transform: translateY(0px);
@@ -188,24 +270,28 @@
     position: absolute;
     z-index: -1;
     right: 0;
-    top: 80vh;
+    top: -150vh;
     width: (440em/16);
-    animation: parallax-slow-anim2 linear;
+    animation: parallax-fast-anim linear;
     animation-timeline: scroll();
     @include max-screen($screen-sm) {
         width: 55%;
+        top: -70vh;
     }
 }
 .abs-img02 {
     position: absolute;
     z-index: -1;
     left: 0;
-    top: 60vh;
+    top: -150vh;
     width: (270em/16);
-    animation: parallax-slow-anim linear;
+    animation: parallax-fast-anim linear;
     animation-timeline: scroll();
     @include max-screen($screen-sm) {
         width: 35%;
+        top: -40vh;
+        left: auto;
+        right: 0;
     }
 }
 
@@ -239,29 +325,39 @@
 }
 
 .sec-area {
-    padding: (200em/16) 0 (100em/16);
+    padding: (300em/16) 40px (100em/16);
     @include max-screen($screen-sm) {
         padding: (100em/16) 0 (50em/16);
     }
     &__ttl {
-        max-width: 1100px;
+        width: 1100px;
         margin: 0 auto;
         font-family: $Hina-font;
         color: $gre;
         font-size: (45em/16);
         line-height: 1.4;
+        font-weight: normal;
         @include max-screen($screen-sm) {
-            font-size: (36em/16);
-            width: 80%;
+            width: percentage(236/390);
+            min-width: 236px;
+            font-size: (38em/16);
+            margin-bottom: 0.5em;
+        }
+        &.--sm {
+            @include max-screen($screen-sm) {
+                font-size: (25em/16);
+            }
         }
     }
     &__txt {
-        max-width: 1100px;
+        width: 1100px;
         margin: 0 auto;
         font-size: (18em/16);
         @include max-screen($screen-sm) {
-            width: 80%;
+            width: percentage(236/390);
+            min-width: 236px;
             margin-top: 0.5em;
+            font-size: (14em/16);
         }
         a {
             color: $gre;
@@ -274,13 +370,15 @@
 }
 
 .shop-list {
-    max-width: 1100px;
+    width: 1100px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     @include max-screen($screen-sm) {
         flex-direction: column;
+        width: percentage(236/390);
+        min-width: 236px;
     }
     li {
         width: percentage(530/1100);
@@ -288,10 +386,14 @@
         display: flex;
         align-items: center;
         @include max-screen($screen-sm) {
-            width: 80%;
+            width: 100%;
             display: block;
+            margin-top: 0;
             margin-left: auto;
             margin-right: auto;
+            & + li {
+                margin-top: 2em;
+            }
         }
         figure {
             width: percentage(236/530);
@@ -304,6 +406,7 @@
         p {
             @include max-screen($screen-sm) {
                 margin-top: 1em;
+                font-size: (14em/16);
             }
             a {
                 font-size: (18em/16);
@@ -312,15 +415,18 @@
                 &:hover {
                     text-decoration: none;
                 }
+                @include max-screen($screen-sm) {
+                    font-size: (16em/14);
+                }
             }
         }
     }
 }
 
 .other-list {
-    max-width: 1100px;
     margin: 3em auto;
     @include min-screen($screen-sm + 1) {
+        width: 1100px;
         display: flex;
         flex-wrap: wrap;
         li {
@@ -361,7 +467,9 @@
         }
     }
     @include max-screen($screen-sm) {
-        width: 80%;
+        flex-direction: column;
+        width: percentage(236/390);
+        min-width: 236px;
         li + li{
             margin-top: 10%;
             padding-top: 10%;
@@ -402,17 +510,17 @@
 
 .more-cont {
     transition: .4s;
-    height: 1400px;
+    height: (1400em/16);
     overflow: hidden;
     @include max-screen($screen-sm) {
-        height: 1540px;
+        height: 1700px;
     }
     &.--sp {
         @include min-screen($screen-sm + 1) {
             height: auto;
         }
         @include max-screen($screen-sm) {
-            height: 200vw;
+            height: 700px;
             overflow: hidden;
         }
     }
@@ -425,16 +533,18 @@
         }
     }
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
     margin: 3em auto 0;
     border-radius: 50em;
     background: #FFF;
     border: 1px solid $gre;
     color: $gre;
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
     position: relative;
+    font-weight: bold;
     cursor: pointer;
+    transition: .3s;
     &:hover {
         background: $gre;
         color: #FFF;
@@ -450,7 +560,7 @@
         background-size: 100% auto;
         position: absolute;
         top: 50%;
-        right: 2em;
+        right: 1em;
         transform: translate(0,-50%);
         transition: .3s;
     }
@@ -459,19 +569,23 @@
             transform: translate(0,-50%) rotate(180deg);
         }
     }
+    @include max-screen($screen-sm) {
+        font-size: (14em/16);
+    }
 }
 
 .sec-grid {
     margin-bottom: 3em;
     padding: 0 40px;
     &__inner {
-        max-width: 1026px;
+        width: 1026px;
         margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
         @include max-screen($screen-sm) {
             flex-direction: column;
+            width: 100%;
         }
     }
     &__read {
@@ -486,12 +600,23 @@
         color: $gre;
         font-family: $Hina-font;
         margin-bottom: 0.25em;
+        @include max-screen($screen-sm) {
+            font-size: (30em/16);
+            line-height: (46/30);
+        }
+    }
+    &__txt {
+        @include max-screen($screen-sm) {
+            font-size: (15em/16);
+            line-height: (28/15);
+        }
     }
     &__map {
         width: percentage(426/1026);
         position: relative;
         @include max-screen($screen-sm) {
             width: 100%;
+            margin-top: 1em;
         }
         .map-pin {
             position: absolute;
@@ -526,7 +651,7 @@
 }
 
 .mv-cont {
-    max-width: 500px;
+    width: 500px;
     height: 280px;
     position: relative;
     margin: 0 auto 3em;
@@ -548,15 +673,35 @@
     @include max-screen($screen-sm) {
         border: 1px solid $gre;
         text-align: center;
-        max-width: 60%;
+        max-width: 70%;
         margin: 0 auto;
     }
     &__ttl {
-        padding: 1em 0;
+        padding: 0.5em 0;
         display: none;
         color: $gre;
+        font-weight: bold;
+        font-size: (14em/16);
+        position: relative;
         @include max-screen($screen-sm) {
             display: block;
+        }
+        &:after {
+            content: "";
+            width: 1em;
+            height: 0.6em;
+            background: url(../img/common/arrow_d.svg) no-repeat;
+            background-size: 100% auto;
+            position: absolute;
+            top: 50%;
+            right: 1em;
+            transform: translate(0,-50%);
+            transition: .3s;
+        }
+        &.active {
+            &:after {
+                transform: translate(0,-50%) rotate(180deg);
+            }
         }
     }
 }
@@ -589,6 +734,7 @@
                 border-radius: 0;
                 border: none;
                 border-top: 1px solid $gre;
+                font-size: (14em/16);
             }
             &:after {
                 content: "";
@@ -614,10 +760,11 @@
 }
 
 .origin-list {
-    max-width: 1100px;
+    width: 1100px;
     margin: 0 auto;
     padding: (200em/16) 0 (100em/16);
     @include max-screen($screen-sm) {
+        width: 100%;
         padding: (50em/16) 40px (50em/16);
     }
     @include min-screen($screen-sm + 1) {
@@ -639,16 +786,25 @@
             display: block;
             margin: 0 auto 1em;
             background: $gre;
+            @include max-screen($screen-sm) {
+                height: (42em/16);
+            }
         }
     }
     &__sub {
         font-size: (15em/16);
+        @include max-screen($screen-sm) {
+            font-size: (13em/16);
+        }
     }
     &__name {
         font-family: $Hina-font;
         font-weight: normal;
         color: $gre;
         font-size: (36em/16);
+        @include max-screen($screen-sm) {
+            font-size: (30em/16);
+        }
     }
     &__tag {
         display: inline-block;
@@ -659,10 +815,17 @@
         width: (120em/14);
         margin-top: .5em;
         margin-bottom: 1em;
+        @include max-screen($screen-sm) {
+            font-size: (12em/16);
+        }
     }
     &__txt {
         text-align: left;
         margin-bottom: 1em;
+        @include max-screen($screen-sm) {
+            font-size: (14em/16);
+            line-height: (24/14);
+        }
     }
     &__img {
         img {

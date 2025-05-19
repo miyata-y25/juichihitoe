@@ -9,6 +9,10 @@ body {
   background-size: 39.4791666667% auto;
 }
 
+.wrap {
+  font-size: clamp(0.75em, 1.1713030747vw, 1em);
+}
+
 /*==================================================================================================
     main
 ==================================================================================================*/
@@ -22,12 +26,14 @@ body {
 }
 @media screen and (max-width: 768px) {
   .top-main {
-    height: 100vh;
+    height: calc(100vh - 54px);
+    max-height: 606px;
+    background-image: url(../img/top/main_bg_sp.png);
   }
 }
 .top-main__ttl {
   position: absolute;
-  left: 15%;
+  left: 21%;
   top: 10%;
   max-width: 130px;
 }
@@ -46,14 +52,15 @@ body {
 }
 @media screen and (max-width: 768px) {
   .top-main__txt {
-    left: 10%;
-    bottom: 15%;
-    width: 21.875em;
+    left: 9.7435897436%;
+    bottom: 0%;
+    margin-bottom: 7.1794871795%;
+    width: 53.0769230769%;
   }
 }
 
 .sec {
-  padding: 22.5em 20px 12.5em;
+  padding: 45vh 20px 20vh;
   margin-top: -28vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -80,7 +87,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .sec {
-    padding: 31.25em 20px 12.5em;
+    padding: 200px 20px 150px;
+    margin-top: -10.7692307692vw;
   }
 }
 .sec__ttl {
@@ -95,18 +103,26 @@ body {
 }
 @media screen and (max-width: 768px) {
   .sec__ttl {
-    font-size: 2.5em;
+    font-size: 2.8333333333em;
   }
 }
 .sec__ttl span {
   display: block;
-  font-size: 0.6034482759em;
+  font-size: 0.5882352941em;
+}
+@media screen and (max-width: 768px) {
+  .sec__ttl.--sm {
+    font-size: 2.5em;
+  }
+  .sec__ttl.--sm span {
+    font-size: 0.6666666667em;
+  }
 }
 .sec__txt {
   font-size: 1.125em;
   line-height: 1.8888888889;
   margin-top: 1em;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.05em;
   position: relative;
   z-index: 1;
 }
@@ -133,6 +149,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .sec.--about {
+    padding-top: 25vh;
+    margin-top: 0;
     background-image: url(../img/top/about_bg_sp.png);
     background-position: center bottom;
   }
@@ -173,10 +191,14 @@ body {
   font-family: "Hina Mincho", serif;
   color: #005c3f;
   font-size: 2.8125em;
+  font-weight: normal;
 }
 @media screen and (max-width: 768px) {
   .shop-area__ttl {
-    width: 80%;
+    width: 60.5128205128%;
+    min-width: 236px;
+    font-size: 3.1666666667em;
+    margin-bottom: 0.5em;
   }
 }
 .shop-area__list {
@@ -217,7 +239,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .shop-area__list li {
-    width: 80%;
+    width: 60.5128205128%;
+    min-width: 236px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -236,6 +259,7 @@ body {
 @media screen and (max-width: 768px) {
   .shop-area__list li p {
     margin-top: 1em;
+    font-size: 1.1666666667em;
   }
 }
 .shop-area__list li p a {
@@ -246,11 +270,16 @@ body {
 .shop-area__list li p a:hover {
   text-decoration: none;
 }
+@media screen and (max-width: 768px) {
+  .shop-area__list li p a {
+    font-size: 1.1428571429em;
+  }
+}
 
 @-webkit-keyframes parallax-fast-anim {
   from {
-    -webkit-transform: translateY(100vh);
-            transform: translateY(100vh);
+    -webkit-transform: translateY(200vh);
+            transform: translateY(200vh);
   }
   to {
     -webkit-transform: translateY(0px);
@@ -260,8 +289,8 @@ body {
 
 @keyframes parallax-fast-anim {
   from {
-    -webkit-transform: translateY(100vh);
-            transform: translateY(100vh);
+    -webkit-transform: translateY(200vh);
+            transform: translateY(200vh);
   }
   to {
     -webkit-transform: translateY(0px);
@@ -291,28 +320,31 @@ body {
 .abs-img01 {
   position: absolute;
   right: 0;
-  bottom: 0%;
-  -webkit-animation: parallax-fast-anim linear;
-          animation: parallax-fast-anim linear;
+  bottom: -140vh;
+  width: 15.9375em;
+  -webkit-animation: parallax-slow-anim linear;
+          animation: parallax-slow-anim linear;
   animation-timeline: scroll();
 }
 @media screen and (max-width: 768px) {
   .abs-img01 {
-    width: 45%;
+    width: 40%;
+    bottom: -180vh;
   }
 }
 
 .abs-img02 {
   position: absolute;
   left: 0;
-  bottom: 0%;
+  bottom: 120vh;
   width: 20.625em;
-  -webkit-animation: parallax-slow-anim linear;
-          animation: parallax-slow-anim linear;
+  -webkit-animation: parallax-fast-anim linear;
+          animation: parallax-fast-anim linear;
   animation-timeline: scroll();
 }
 @media screen and (max-width: 768px) {
   .abs-img02 {
+    bottom: -45vh;
     width: 45%;
   }
 }

@@ -57,14 +57,14 @@ a {
 .pc-show {
     display: block;
     position: relative;
-    @include max-screen($screen-md) {
+    @include max-screen($screen-sm) {
         display: none;
     }
 }
 .sp-show {
     display: none;
     position: relative;
-    @include max-screen($screen-md) {
+    @include max-screen($screen-sm) {
         display: block;
     }
 }
@@ -190,7 +190,7 @@ a {
     opacity: 0;
 }
 .fadein.is-animated {
-    animation: fadeIn 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
+    animation: fadeIn 3s cubic-bezier(0.33, 1, 0.68, 1) forwards;
 }
 .slideinR.is-animated {
     animation: slideInR 1s cubic-bezier(0.33, 1, 0.68, 1) forwards;
@@ -240,6 +240,22 @@ a {
         opacity: 1;
     }
 }
+
+.fadeincont > *{
+    opacity: 0;
+}
+.fadeincont.is-animated {
+    opacity: 1;
+}
+$a: 1;
+@while $a <= 50 {
+    .fadeincont.is-animated > *:nth-of-type(#{$a}) {
+        animation: slideInB 0.5s cubic-bezier(0.33, 1, 0.68, 1) (0.2s * $a) forwards;
+    }
+    $a: $a + 1;
+}
+
+
 
 sup {
     font-size: 0.5em;
@@ -392,13 +408,14 @@ sup {
 ==================================================================================================*/
 .site-header {
     width: 100%;
-    @include pos-f(left,0,top,0);
+    @include pos-a(left,0,top,0);
     z-index: 99999;
-    font-size: clamp((12em/16), 1vw , (16em/16));
-    padding: 1em;
+    font-size: 1.6rem;
     transition: background .5s;
     @include max-screen($screen-sm) {
-        padding: 0;
+        position: fixed;
+        font-size: 1.2rem;
+        padding: 9px 0;
         background: #FFF;
     }
     &__inner {
@@ -409,11 +426,11 @@ sup {
         display: none;
         margin-right: auto;
         img {
-            height: (36em/12);
+            height: 36px;
         }
         @include max-screen($screen-sm) {
             display: block;
-            margin-left: 1em;
+            margin-left: 16px;
         }
     }
     &__btn {
@@ -421,18 +438,24 @@ sup {
         width: (297em/16);
     }
     .menu-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
         z-index: 10000;
         display: block;
         background-color: $gre;
         border: none;
-        width: (70em/16);
-        height: (70em/16);
-        padding: (20em/16) (20em/16) (24em/16);
+        width: 60px;
+        height: 60px;
+        padding: 21px 16px 23px;
         font-weight: bold;
         margin-left: auto;
         @include max-screen($screen-sm) {
-            width: (70em/16);
-            height: (70em/16);
+            width: 54px;
+            height: 54px;
+            padding: 18px 14px 20px;
+            top: 0;
+            right: 0;
         }
         > span {
         }
@@ -478,14 +501,14 @@ sup {
                 transform: translateY(0px) rotate(-45deg);
                 span {
                     &:nth-child(1) {
-                        transform: rotate(0deg) translateY((14em/16));
+                        transform: rotate(0deg) translateY(8px);
                         width: 100%;
                     }
                     &:nth-child(2) {
                         opacity: 0;
                     }
                     &:nth-child(3) {
-                        transform: rotate(-90deg) translateX((13em/16));
+                        transform: rotate(-90deg) translateX(8px);
                         width: 100%;
                     }
                 }
@@ -497,25 +520,30 @@ sup {
         @include pos-f(left,0,top,0,bottom,0);
         width: 100%;
         background: rgba(#000,.3);
+        @include max-screen($screen-sm) {
+            background: rgba(#FFF,.9);
+        }
         &__inner {
             height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             @include max-screen($screen-sm) {
-                margin-top: (70em/16);
+                margin-top: 54px;
                 align-items: flex-start;
+                display: block;
+                height: calc(100% - 54px);
             }
         }
     }
     .header-nav {
-        max-width: 840px;
-        width: 100%;
+        width: 840px;
         background: rgba(#FFF,.93) url(../img/common/gnav_bg.svg) no-repeat;
         background-size: (100em/16) auto;
         background-position: bottom right;
-        padding: 7em;
+        padding: 100px 110px 60px;
         @include max-screen($screen-sm) {
+            width: 100%;
             padding: 0;
             background-size: (80em/16) auto;
         }
@@ -526,7 +554,7 @@ sup {
             margin-bottom: 3em;
             @include max-screen($screen-sm) {
                 flex-direction: column;
-                margin-bottom: 2em;
+                margin-bottom: 2.5em;
             }
             &__list {
                 position: relative;
@@ -543,11 +571,12 @@ sup {
                 }
                 > a {
                     @include underline(false,false);
-                    font-weight: 600;
                     color: $gre;
                     @include max-screen($screen-sm) {
+                        line-height: 78px;
+                        font-size: 15px;
                         display: block;
-                        padding: 1.5em 1em;
+                        padding: 0 1em;
                     }
                 }
                 &:nth-of-type(odd) {
@@ -570,9 +599,8 @@ sup {
             figure {
                 width: (348em/16);
                 @include max-screen($screen-sm) {
-                    margin-bottom: 1em;
-                    width: 90%;
-                    max-width: 320px;
+                    margin-bottom: 2em;
+                    width: 309px;
                 }
             }
             a {
@@ -585,7 +613,9 @@ sup {
             }
         }
         .info-cont {
-            padding: 0 3em 3em;
+            @include max-screen($screen-sm) {
+                padding: 0 35px 38px;
+            }
             a {
                 color: #000;
             }
@@ -601,6 +631,25 @@ sup {
                 }
                 a {
                     display: block;
+                }
+            }
+            .site-footer__ttl {
+                font-size: (15em/16);
+                margin-bottom: 0.25em;
+                @include max-screen($screen-sm) {
+                    font-size: 1.3rem;
+                }
+            }
+            .site-footer__txt {
+                font-size: (15em/16);
+                @include max-screen($screen-sm) {
+                    font-size: 1.3rem;
+                }
+                span {
+                    font-size: (14em/15);
+                    @include max-screen($screen-sm) {
+                        font-size: 1.2rem;
+                    }
                 }
             }
         }
@@ -628,26 +677,29 @@ sup {
     height: (120em/16);
     z-index: 100;
     border-radius: 50em;
-    box-shadow: (10em/16) (10em/16) (10em/16) rgba(#000,0.2);
+    box-shadow: (40em/16) (40em/16) (40em/16) rgba(#000,0.24);
     &.cls {
-        animation: buybtn 1s ease-in forwards;
+        animation: buybtn .5s ease-in forwards;
+    }
+    @include max-screen($screen-sm) {
+        width: 84px;
+        height: 84px;
     }
 }
 
 @keyframes buybtn {
     0% {
-        transform: translate(0%,0);
+        transform: translate(20%,0);
         opacity: 0;
     }
-    20% {
-        transform: translate(0%,0);
+    40% {
         opacity: 1;
     }
-    40% {
-        transform: translate(4%,0);
+    50% {
+        transform: translate(-2%,0);
     }
-    80% {
-        transform: translate(-4%,0);
+    75% {
+        transform: translate(2%,0);
     }
     100% {
         transform: translate(0%,0);
@@ -655,9 +707,8 @@ sup {
 }
 
 .wrap {
-    font-size: clamp((12em/16), 1vw , (16em/16));
     @include max-screen($screen-sm) {
-        margin-top: (70em/16);
+        margin-top: 54px;
     }
 }
 
