@@ -344,7 +344,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .abs-img02 {
-    bottom: -45vh;
+    bottom: 110vh;
     width: 45%;
   }
 }

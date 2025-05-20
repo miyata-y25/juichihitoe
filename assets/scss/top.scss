@@ -267,7 +267,7 @@ body {
     animation: parallax-fast-anim linear;
     animation-timeline: scroll();
     @include max-screen($screen-sm) {
-        bottom: -45vh;
+        bottom: 110vh;
         width: 45%;
     }
 }
